@@ -1,0 +1,17 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import TrainList from './components/TrainList';
+import TrainDetail from './components/TrainDetail';
+
+function AppHTTPMS() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={TrainList} />
+        <Route path="/train/:id" component={TrainDetail} />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
